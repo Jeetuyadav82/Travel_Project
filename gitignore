@@ -1,0 +1,6 @@
+venv/
+.env.dev
+Dockerfile
+my-react-app/node_modules
+travel/db.sqlite3
+travel/.env
