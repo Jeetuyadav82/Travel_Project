@@ -1,12 +1,12 @@
-name: CI/CD Pipeline
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on push to the main branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,9 +20,12 @@ jobs:
 
 #    - name: Install dependencies
 #      run: npm install
-#
-#    - name: Run tests
-#      run: npm test
 
-    - name: Pipeline done
-      run: echo "Pipeline done"
+    - name: Build project
+      run: npm run build  # Adjust this command based on your build script
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # Adjust this path to your build output directory
