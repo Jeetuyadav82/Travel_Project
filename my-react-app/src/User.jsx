@@ -225,7 +225,7 @@ const User = () => {
         )}
         <NavDropdown.Item onClick={handleMyBookings} style={{ color: 'blue' }}>Bookings</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item onClick={handleLogout} style={{ color: 'blue' }}>Logout</NavDropdown.Item>
+        <NavDropdown.Item onClick={handleLogout} style={{ color: 'red' }}>Logout</NavDropdown.Item>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

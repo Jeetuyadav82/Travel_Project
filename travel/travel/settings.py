@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'pytest_django',
     'api',
     'rest_framework_simplejwt.token_blacklist'
 ]
