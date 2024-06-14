@@ -23,6 +23,7 @@ jobs:
 
     - name: Build project
       run: npm run build  # Adjust this command based on your build script
+      working-directory: ../my-react-app
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
