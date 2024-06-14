@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./my-react-app  # ..Ensure this path points to your package.json directory
+      working-directory: ./my-react-app  # ...Ensure this path points to your package.json directory
 
     - name: Build project
       run: npx vite build  # Use npx to ensure Vite is run from the local node_modules
